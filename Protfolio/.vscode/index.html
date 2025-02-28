@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Kanagavel - A creative web developer passionate about building interactive experiences.">
+    <meta name="keywords" content="web development, UI/UX design, photography, Kanagavel">
+    <meta name="author" content="Kanagavel">
+    <title>Portfolio - Kanagavel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glowText {
+            0% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            }
+
+            50% {
+                text-shadow: 0 0 30px rgba(255, 255, 255, 1);
+            }
+
+            100% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        @keyframes floatEffect {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+    <nav class="fixed top-0 w-full bg-transparent backdrop-blur-md p-4 text-white z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-serif font-bold tracking-wide">Kanagavel</h1>
+            <button id="menu-toggle" class="md:hidden">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+            <div id="menu" class="hidden md:flex space-x-6 text-lg font-medium tracking-wide">
+                <a href="#home" class="hover:text-yellow-400">Home</a>
+                <a href="#services" class="hover:text-yellow-400">Services</a>
+                <a href="#projects" class="hover:text-yellow-400">Projects</a>
+                <a href="#contact" class="hover:text-yellow-400">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-20 relative">
+        <div class="md:w-1/2 text-left" style="animation: fadeIn 1.5s ease-in-out;">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 text-white"
+                style="animation: glowText 2s infinite ease-in-out;">I'm Kanagavel</h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-md mb-6">A creative web developer passionate about building
+                interactive experiences.</p>
+            <p class="text-gray-400 max-w-md mb-6">I specialize in front-end development, UI/UX design, and building
+                visually appealing and highly functional web applications. With expertise in modern web technologies, I
+                bring creative solutions to digital platforms.</p>
+            <div class="flex space-x-4">
+                <button onclick="openWhatsApp()"
+                    class="bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-500 transition transform hover:scale-105">Hire
+                    Me</button>
+                <button onclick="viewResume()"
+                    class="bg-transparent border-2 border-yellow-400 text-yellow-400 px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 hover:text-gray-900 transition transform hover:scale-105">Download
+                    Resume</button>
+            </div>
+        </div>
+        <div class="md:w-1/2 flex justify-end relative">
+            <img src="/Protfolio/assets/me.png" alt="Kanagavel"
+                class="w-64 h-64 md:w-96 md:h-96 rounded-full shadow-xl relative z-10"
+                style="animation: floatEffect 3s infinite ease-in-out;">
+        </div>
+    </section>
+
+    <section id="services" class="py-20 px-6 md:px-20 bg-gray-900 text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl font-extrabold text-yellow-400 mb-6">Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+                    <img src="/Protfolio/assets/Website designer.gif" alt="Web Development"
+                        class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-bold text-yellow-300">Web Development</h3>
+                    <p class="text-gray-300 mt-2">Building responsive and interactive websites.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+                    <img src="/Protfolio/assets/UI-UX differences.gif" alt="UI/UX Design" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-bold text-yellow-300">UI/UX Design</h3>
+                    <p class="text-gray-300 mt-2">Creating user-friendly and visually appealing designs.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+                    <img src="/assets/photography.jpg" alt="Photography & Editing" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-bold text-yellow-300">Photography & Editing</h3>
+                    <p class="text-gray-300 mt-2">Professional photography and editing services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 px-6 md:px-20 bg-gray-800 text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl font-extrabold text-yellow-400 mb-6">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <a href="https://www.univmeta.xyz/"
+                    class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 block">
+                    <img src="project1.jpg" alt="Project 1" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-bold text-yellow-300">Project 1</h3>
+                    <p class="text-gray-300 mt-2">Academic Form Automation System (AFAS)</p>
+                </a>
+                <a href="project2-link.html"
+                    class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 block">
+                    <img src="project2.jpg" alt="Project 2" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-bold text-yellow-300">Project 2</h3>
+                    <p class="text-gray-300 mt-2">Description of project 2.</p>
+                </a>
+                <a href="project3-link.html"
+                    class="bg-gray-700 p-6 rounded-lg shadow-lg transform transition duration-300 hover:scale-105 block">
+                    <img src="project3.jpg" alt="Project 3" class="w-full h-48 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-bold text-yellow-300">Project 3</h3>
+                    <p class="text-gray-300 mt-2">Description of project 3.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 px-6 md:px-20 bg-gray-800 text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-5xl font-extrabold text-yellow-400 mb-6">Contact</h2>
+            <p class="text-gray-300 mb-6">Feel free to reach out via email or phone. I'm always happy to connect!</p>
+            <div class="mb-6">
+                <p class="text-lg"><strong>Email:</strong> Kanagavel9343@gmail.com</p>
+                <p class="text-lg"><strong>Phone:</strong> +91 9342120634</p>
+            </div>
+            <div class="flex justify-center space-x-6">
+                <a href="https://github.com/yourusername" target="_blank"
+                    class="text-gray-300 hover:text-yellow-400 text-3xl">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank"
+                    class="text-gray-300 hover:text-yellow-400 text-3xl">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://wa.me/919342120634?text=Hey%20I%20need%20your%20service" target="_blank"
+                    class="text-gray-300 hover:text-yellow-400 text-3xl">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center p-4 bg-gray-800">
+        <p>&copy; 2025 Kanagavel. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            document.getElementById('menu').classList.toggle('hidden');
+        });
+
+        function openWhatsApp() {
+            window.open('https://wa.me/919342120634?text=Hey%20I%20need%20your%20service', '_blank');
+        }
+
+        function viewResume() {
+            // Add functionality to view or download resume
+            alert("Resume download functionality to be implemented.");
+        }
+    </script>
+</body>
+
+</html>
